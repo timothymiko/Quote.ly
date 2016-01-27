@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xXl-Zj-dt7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </mutableArray>
+        <mutableArray key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+            <string>Raleway-Medium</string>
+        </mutableArray>
+        <mutableArray key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+            <string>Raleway-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Quote Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuoteSearchViewController" customModule="Quote_ly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Quote_ly" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote.ly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xa-Qv-fgt">
+                                <rect key="frame" x="204" y="75" width="192" height="59"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize your search below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypj-2D-LpG">
+                                <rect key="frame" x="177" y="144" width="245" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPu-Y5-7NV" customClass="SelectableUIButton" customModule="Quote_ly" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XIo-kE-oix"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="search"/>
+                                <state key="highlighted" image="search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mi7-Za-BHq" kind="show" identifier="QuoteResultSegue" id="OLm-X6-9nO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-oW-ANV">
+                                <rect key="frame" x="32" y="250" width="536" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQC-Ow-n2S">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="19"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Motivation" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hc-O7-X43">
+                                        <rect key="frame" x="386" y="0.0" width="150" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="ne7-Uq-iHk"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="0.80784313725490198" green="0.53333333333333333" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="YeE-KI-fO4"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-B2-rTS">
+                                        <rect key="frame" x="0.0" y="29" width="536" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="LIC-zV-gjf"/>
+                                            <constraint firstAttribute="height" constant="1" id="hSf-tG-AB2"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LIC-zV-gjf"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5m-fY-cXN">
+                                        <rect key="frame" x="0.0" y="40" width="84.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akx-sI-b6N">
+                                        <rect key="frame" x="386" y="40" width="150" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="FdL-9Q-JbS"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="0.80784313725490198" green="0.53333333333333333" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ufM-AB-8XQ"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfT-os-UQa">
+                                        <rect key="frame" x="0.0" y="69" width="536" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="gjb-AT-ii2"/>
+                                            <constraint firstAttribute="height" constant="1" id="qa6-zT-6vl"/>
+                                            <constraint firstAttribute="height" constant="3" id="qpc-F8-diW"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="qa6-zT-6vl"/>
+                                                <exclude reference="qpc-F8-diW"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7m-gN-xAg">
+                                        <rect key="frame" x="0.0" y="80" width="88.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="100" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLH-xV-Zor">
+                                        <rect key="frame" x="386" y="80" width="150" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="pOg-Cp-kd0"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="0.80784313725490198" green="0.53333333333333333" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wqe-4q-BFR"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5nr-B2-rTS" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="10G-HY-OnB"/>
+                                    <constraint firstItem="SLH-xV-Zor" firstAttribute="baseline" secondItem="O7m-gN-xAg" secondAttribute="baseline" id="3EM-bk-6JK"/>
+                                    <constraint firstAttribute="trailing" secondItem="akx-sI-b6N" secondAttribute="trailing" id="6af-NR-k1l"/>
+                                    <constraint firstItem="O7m-gN-xAg" firstAttribute="top" secondItem="tfT-os-UQa" secondAttribute="bottom" constant="10" id="EF2-q7-m9g"/>
+                                    <constraint firstItem="tfT-os-UQa" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="Eib-Mm-fy6"/>
+                                    <constraint firstItem="1hc-O7-X43" firstAttribute="baseline" secondItem="sQC-Ow-n2S" secondAttribute="baseline" id="Izl-mg-Prf"/>
+                                    <constraint firstAttribute="trailing" secondItem="5nr-B2-rTS" secondAttribute="trailing" id="UYl-Rq-kLX"/>
+                                    <constraint firstAttribute="trailing" secondItem="tfT-os-UQa" secondAttribute="trailing" id="YID-yL-JHb"/>
+                                    <constraint firstItem="k5m-fY-cXN" firstAttribute="top" secondItem="5nr-B2-rTS" secondAttribute="bottom" constant="10" id="ZL7-fX-a2s"/>
+                                    <constraint firstAttribute="trailing" secondItem="SLH-xV-Zor" secondAttribute="trailing" id="bwq-vM-aNm"/>
+                                    <constraint firstItem="sQC-Ow-n2S" firstAttribute="top" secondItem="Bbl-oW-ANV" secondAttribute="top" id="gHE-Fh-sLQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="O7m-gN-xAg" secondAttribute="bottom" id="gwP-4j-lSJ"/>
+                                    <constraint firstItem="5nr-B2-rTS" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="heS-WT-FF4"/>
+                                    <constraint firstItem="O7m-gN-xAg" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="miL-BW-kKZ"/>
+                                    <constraint firstItem="k5m-fY-cXN" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="rxW-Gf-1Eq"/>
+                                    <constraint firstItem="akx-sI-b6N" firstAttribute="baseline" secondItem="k5m-fY-cXN" secondAttribute="baseline" id="s1L-rd-uRA"/>
+                                    <constraint firstItem="tfT-os-UQa" firstAttribute="top" secondItem="k5m-fY-cXN" secondAttribute="bottom" constant="10" id="s2X-9I-1et"/>
+                                    <constraint firstAttribute="trailing" secondItem="5nr-B2-rTS" secondAttribute="trailing" id="skX-RN-h9o"/>
+                                    <constraint firstAttribute="trailing" secondItem="1hc-O7-X43" secondAttribute="trailing" id="xQM-xQ-bWk"/>
+                                    <constraint firstItem="5nr-B2-rTS" firstAttribute="top" secondItem="sQC-Ow-n2S" secondAttribute="bottom" constant="10" id="yVh-L2-bLs"/>
+                                    <constraint firstItem="sQC-Ow-n2S" firstAttribute="leading" secondItem="Bbl-oW-ANV" secondAttribute="leading" id="z22-t4-dP7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ypj-2D-LpG" firstAttribute="top" secondItem="4xa-Qv-fgt" secondAttribute="bottom" constant="10" id="3l3-jS-TKa"/>
+                            <constraint firstAttribute="trailing" secondItem="iPu-Y5-7NV" secondAttribute="trailing" id="4ih-kh-eAG"/>
+                            <constraint firstItem="4xa-Qv-fgt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="FgY-hN-UAt"/>
+                            <constraint firstItem="ypj-2D-LpG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LmR-hU-wOu"/>
+                            <constraint firstAttribute="trailing" secondItem="Bbl-oW-ANV" secondAttribute="trailing" constant="32" id="Nz4-uy-VbN"/>
+                            <constraint firstItem="Bbl-oW-ANV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jou-aE-1Hh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iPu-Y5-7NV" secondAttribute="bottom" id="nyj-qa-c9H"/>
+                            <constraint firstItem="iPu-Y5-7NV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ohm-hb-ZQY"/>
+                            <constraint firstItem="Bbl-oW-ANV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="sa2-Ns-R30"/>
+                            <constraint firstItem="4xa-Qv-fgt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vmv-Cf-OzP"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.74901960784313726" green="0.35686274509803922" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.68235294117647061" green="0.28235294117647058" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="oNE-UM-Bf9"/>
+                    <connections>
+                        <outlet property="categoryTextField" destination="1hc-O7-X43" id="poM-ga-eTF"/>
+                        <outlet property="maxLengthTextField" destination="SLH-xV-Zor" id="c9X-fa-IZb"/>
+                        <outlet property="minLengthTextField" destination="akx-sI-b6N" id="HO3-wv-vDF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="398"/>
+        </scene>
+        <!--Quote Result View Controller-->
+        <scene sceneID="loZ-5l-3Ir">
+            <objects>
+                <viewController id="mi7-Za-BHq" customClass="QuoteResultViewController" customModule="Quote_ly" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8e3-DZ-BZe"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHB-Ze-tsO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g8x-t0-dLL" customClass="GradientView" customModule="Quote_ly" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33i-6H-Jjp">
+                                <rect key="frame" x="25" y="45" width="33" height="32"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <segue destination="MBC-tp-R96" kind="unwind" identifier="UnwindToSearchSegue" unwindAction="unwindFromResult:" id="TgU-C5-S7b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZD-AJ-g8U">
+                                <rect key="frame" x="257" y="51" width="86" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0p8-ZL-RF3">
+                                <rect key="frame" x="0.0" y="223" width="600" height="113"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="— Marilyn Suttle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykG-zp-3FM">
+                                        <rect key="frame" x="48" y="89" width="153" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="20"/>
+                                        <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get in touch with your passion and put it to work at work." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYr-9D-eR0">
+                                        <rect key="frame" x="32" y="8" width="400" height="56.5"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="24"/>
+                                        <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wYr-9D-eR0" firstAttribute="top" secondItem="0p8-ZL-RF3" secondAttribute="top" constant="8" id="3iI-a5-zdX"/>
+                                    <constraint firstItem="ykG-zp-3FM" firstAttribute="top" secondItem="wYr-9D-eR0" secondAttribute="bottom" constant="25" id="HlC-7Z-oMY"/>
+                                    <constraint firstItem="wYr-9D-eR0" firstAttribute="leading" secondItem="0p8-ZL-RF3" secondAttribute="leading" constant="8" id="RGk-WO-fmS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ykG-zp-3FM" secondAttribute="bottom" id="WUm-mX-mK3"/>
+                                    <constraint firstItem="ykG-zp-3FM" firstAttribute="leading" secondItem="wYr-9D-eR0" secondAttribute="leading" constant="16" id="YPG-o4-394"/>
+                                    <constraint firstItem="wYr-9D-eR0" firstAttribute="leading" secondItem="0p8-ZL-RF3" secondAttribute="leading" constant="32" id="uXL-9C-hkC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RGk-WO-fmS"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lX-Z5-Ztu" customClass="SelectableUIButton" customModule="Quote_ly" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="540" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="J6F-JR-IKV"/>
+                                </constraints>
+                                <state key="normal" image="copy"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyToClipboard" destination="mi7-Za-BHq" eventType="touchUpInside" id="LsY-0M-LiJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owh-k2-vGY" customClass="SelectableUIButton" customModule="Quote_ly" customModuleProvider="target">
+                                <rect key="frame" x="300" y="540" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="xZm-a3-n5v"/>
+                                </constraints>
+                                <state key="normal" image="refresh"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="refresh" destination="mi7-Za-BHq" eventType="touchUpInside" id="NbV-cG-AQC"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lqF-vI-RUT">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JHB-Ze-tsO" firstAttribute="top" secondItem="7lX-Z5-Ztu" secondAttribute="bottom" id="1Yq-CC-U5j"/>
+                            <constraint firstItem="7lX-Z5-Ztu" firstAttribute="width" secondItem="g8x-t0-dLL" secondAttribute="width" multiplier="0.5" id="48n-Jx-cTv"/>
+                            <constraint firstItem="0p8-ZL-RF3" firstAttribute="leading" secondItem="g8x-t0-dLL" secondAttribute="leading" id="9wB-Mo-8FT"/>
+                            <constraint firstAttribute="trailing" secondItem="0p8-ZL-RF3" secondAttribute="trailing" id="Aj9-Wo-ZY6"/>
+                            <constraint firstItem="lqF-vI-RUT" firstAttribute="centerX" secondItem="g8x-t0-dLL" secondAttribute="centerX" id="BHy-nf-D3J"/>
+                            <constraint firstItem="wYr-9D-eR0" firstAttribute="width" secondItem="g8x-t0-dLL" secondAttribute="width" multiplier="2/3" id="BXK-nn-UFK"/>
+                            <constraint firstItem="Owh-k2-vGY" firstAttribute="width" secondItem="g8x-t0-dLL" secondAttribute="width" multiplier="0.5" id="Gwp-Df-Dcb"/>
+                            <constraint firstItem="JHB-Ze-tsO" firstAttribute="top" secondItem="Owh-k2-vGY" secondAttribute="bottom" id="L3m-Uh-tzh"/>
+                            <constraint firstItem="lqF-vI-RUT" firstAttribute="centerY" secondItem="g8x-t0-dLL" secondAttribute="centerY" id="YRl-zk-iM9"/>
+                            <constraint firstAttribute="trailing" secondItem="Owh-k2-vGY" secondAttribute="trailing" id="bBV-mF-NJX"/>
+                            <constraint firstItem="KZD-AJ-g8U" firstAttribute="centerX" secondItem="g8x-t0-dLL" secondAttribute="centerX" id="e5K-35-auV"/>
+                            <constraint firstItem="7lX-Z5-Ztu" firstAttribute="leading" secondItem="g8x-t0-dLL" secondAttribute="leading" id="hYm-IT-AnT"/>
+                            <constraint firstItem="0p8-ZL-RF3" firstAttribute="centerY" secondItem="g8x-t0-dLL" secondAttribute="centerY" constant="-20" id="jJs-qv-YjT"/>
+                            <constraint firstItem="KZD-AJ-g8U" firstAttribute="centerY" secondItem="33i-6H-Jjp" secondAttribute="centerY" id="rCG-Hq-1Ne"/>
+                            <constraint firstItem="33i-6H-Jjp" firstAttribute="leading" secondItem="g8x-t0-dLL" secondAttribute="leading" constant="25" id="wTC-6v-AHR"/>
+                            <constraint firstItem="33i-6H-Jjp" firstAttribute="top" secondItem="8e3-DZ-BZe" secondAttribute="bottom" constant="25" id="wsx-g5-qdv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.74901960784313726" green="0.35686274509803922" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.68235294117647061" green="0.28235294117647058" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lqF-vI-RUT" id="ta0-XS-c0B"/>
+                        <outlet property="authorLabel" destination="ykG-zp-3FM" id="T63-q9-dn7"/>
+                        <outlet property="categoryLabel" destination="KZD-AJ-g8U" id="g2l-Zu-Oml"/>
+                        <outlet property="copyButton" destination="7lX-Z5-Ztu" id="Ydj-k4-CYl"/>
+                        <outlet property="quoteLabel" destination="wYr-9D-eR0" id="ctR-yF-pce"/>
+                        <outlet property="refreshButton" destination="Owh-k2-vGY" id="huD-R4-n0G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lb-7d-J47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MBC-tp-R96" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="398"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bLv-K7-1Yp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xXl-Zj-dt7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WrU-4n-Ipb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NY6-ZZ-SqS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqg-Un-dXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="398"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="23" height="16"/>
+        <image name="copy" width="19" height="22"/>
+        <image name="refresh" width="20" height="20"/>
+        <image name="search" width="22" height="22"/>
+    </resources>
+</document>
